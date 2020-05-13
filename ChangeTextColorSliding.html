@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <title>ChangeTextColorSliding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            background-color: #E1DD8F;
+            box-sizing: border-box;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .wrap {
+            width: 50%;
+            height: 100vh;
+            background-color: #E0777D;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #E1DD8F;
+        }
+        .sliding{
+            position: absolute;
+            top: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 10em;
+            font-family: "arial black";
+            animation: slide 15s linear infinite;
+        }
+        @keyframes slide{
+            0%
+            {
+                transform: translate(0%,-50%);
+            }
+            100%
+            {
+                transform: translate(-50%,-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <span class="sliding">
+            <span>Change</span>
+            <span>Text</span>
+            <span>Color</span>
+            <span> - </span>
+            <span>Sliding </span>
+        </span>
+        <div class="wrap">
+            <span class="sliding">
+                <span>Change</span>
+                <span>Text</span>
+                <span>Color</span>
+                <span> - </span>
+                <span>Sliding </span>
+            </span>
+        </div>
+    </section>
+</body>
+
+</html>

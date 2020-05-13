@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap">
+    <title>RWDBoxModel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+        }
+
+        .wrap {
+            background-color: #16384c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 1100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .card {
+            max-width: 300px;
+            height: 250px;
+            position: relative;
+            background-color: #A2A79E;
+            margin: 30px 10px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            height: 500px;
+        }
+
+        .imgBox {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 5px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .content {
+            position: relative;
+            margin-top: -140px;
+            line-height: 1.5;
+            padding: 10px 15px;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+
+        .card:hover .content {
+            visibility: visible;
+            opacity: 1;
+            margin-top: -50px;
+            transition-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="card">
+                <div class="imgBox">
+                    <img src="https://picsum.photos/260/260?random=1">
+                </div>
+                <div class="content">
+                    <h2>It's Title One</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo quibusdam, vitae,
+                        delectus
+                        dolor omnis illum quia eveniet placeat dignissimos eaque recusandae excepturi ducimus quos
+                        cupiditate, facilis mollitia numquam provident!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img src="https://picsum.photos/260/260?random=2">
+                </div>
+                <div class="content">
+                    <h2>It's Title Two</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo quibusdam, vitae,
+                        delectus
+                        dolor omnis illum quia eveniet placeat dignissimos eaque recusandae excepturi ducimus quos
+                        cupiditate, facilis mollitia numquam provident!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img src="https://picsum.photos/260/260?random=3">
+                </div>
+                <div class="content">
+                    <h2>It's Title Two</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo quibusdam, vitae,
+                        delectus
+                        dolor omnis illum quia eveniet placeat dignissimos eaque recusandae excepturi ducimus quos
+                        cupiditate, facilis mollitia numquam provident!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
