@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>TransparentLoginForm</title>
+    <script>
+        document.addEventListener("touchstart", function() {},false);
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            font-family: sans-serif;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-image: url(img/formBg.jpg);
+            background-blend-mode: saturation;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .loginBox {
+            position: relative;
+            max-width: 280px;
+            color: #fff;
+            padding: 20px 30px;
+            overflow: hidden;
+            /* border: 6px solid #4caf50; */
+            z-index: 2;
+        }
+        .loginBox:hover:before{
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        .loginBox:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top:6px #4caf50 solid;
+            border-left:6px #4caf50 solid ;
+            height: 20px;
+            width: 20px;
+            opacity: 0;
+            transition: 1s;
+            z-index: 1;
+        }
+        .loginBox:hover:after{
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        .loginBox:after{
+            content:'';
+            position: absolute;
+            bottom: 0;
+            right:  0;
+            border-bottom:6px #4caf50 solid;
+            border-right:6px #4caf50 solid ;
+            height: 20px;
+            width: 20px;
+            opacity: 0;
+            transition: 1s;
+            z-index: 1;
+        }
+        .loginBox h1 {
+            font-size: 40px;
+            border-bottom: 6px solid #4caf50;
+            padding: 13px 0;
+            margin-bottom: 50px;
+            display: inline-block;
+        }
+
+        .textbox {
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 18px 0;
+            margin: 10px 0;
+            /* border-bottom: 4px solid #4caf50; */
+        }
+        .textbox:focus{
+            padding: 0;
+        }
+        .textbox i {
+            width: 26px;
+            text-align: center;
+        }
+
+        .textbox input {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            margin: 0 10px;
+            color: #fff;
+            position: relative;
+            z-index: 3;
+        }
+        .textbox:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: 0px;
+            background-color: #4caf50;
+            box-shadow: 0px 0px 40px #4caf50;
+            /* left: -100%; */
+        }
+
+        .btn {
+            width: 100%;
+            background: none;
+            border: 2px solid #4caf50;
+            color: #fff;
+            padding: 8px 0;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 15px 0;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .btn:hover {
+            background-color: #4caf50;
+            transition: 1s;
+            box-shadow: 0px 0px 20px #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="loginBox">
+            <h1>Login</h1>
+            <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="textbox">
+                <i class="fas fa-unlock-alt"></i>
+                <input type="text" placeholder="Password">
+            </div>
+            <input type="button" class="btn" value="Sign in">
+        </div>
+    </div>
+
+</body>
+
+</html>
