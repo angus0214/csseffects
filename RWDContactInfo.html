@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>RWDContactInfo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans',sans-serif;
+        }
+        body{
+            background-color: #EBF5EE;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+        .contact{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            position: relative;
+            width: 300px;
+            background-color: #283044;
+            margin: 20px;
+            padding: 70px 0;
+            display: flex;
+            /* flex: 1; */
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .card i {
+            font-size: 2em;
+            transition: 0.3s linear;
+            color: #F97068;
+        }
+        .card:hover i{
+            transform: scale(4);
+            opacity: 0;
+        }
+        .card span,
+        .card h3{
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 2px;
+        }
+        .card h3{
+            top:20px;
+            color: #F97068;
+            font-size: 26px;
+        }
+        .card:hover h3{
+            opacity: 1;
+            top: 46px;
+            transition: 0.3s linear;
+            white-space: nowrap;
+        }
+        .card span{
+            color: #FFF;
+            bottom: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            
+        }
+        .card:hover span{
+            opacity: 1;
+            bottom: 46px;
+            transition: 0.3s linear;
+            transition-delay: 0.3s;
+        }
+        @media (max-width: 768px) {
+            .card{
+                max-width: 80%;
+                flex:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <div class="card">
+            <i class="fas fa-envelope"></i>
+            <div class="card-content">
+                <h3>Email</h3>
+                <span>email@address.com</span>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fas fa-phone"></i>
+            <div class="card-content">
+                <h3>Phone Number</h3>
+                <span>+8869000000</span>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fab fa-github"></i>
+            <div class="card-content">
+                <h3>Github</h3>
+                <span>Angus0214</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
