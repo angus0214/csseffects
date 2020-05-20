@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,61 +9,105 @@
     <link rel="stylesheet" href="css/normalize.css">
     <title>SiedNavButton</title>
     <style>
-        body{
+        body {
             background-color: #254E70;
             font-family: sans-serif;
         }
-        ul{
-            list-style:none;
+
+        ul {
+            list-style: none;
             padding: 0;
         }
-        .sidebar{
+
+        .title {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .title h2 {
+            position: relative;
+            font-size: 3em;
+            margin: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        .title h2:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 40px;
+            height: 100%;
+            transform: skewX(45deg);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            transition: 0s;
+        }
+        .title h2:hover:before{
+            right: 120%;
+            transition: 1s;
+        }
+        .sidebar {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
         }
+
         .sidebar li {
             margin-bottom: 30px;
         }
-        .sidebar li a{
+
+        .sidebar li a {
             display: block;
             padding: 10px;
             width: 130px;
             text-align: center;
             text-decoration: none;
-            background-color:red;
+            background-color: red;
             color: white;
             font-size: 22px;
             border-radius: 8px;
             transform: translateX(-80%);
             transition: 0.5s ease;
         }
-        .sidebar li a:hover{
+
+        .sidebar li a:hover {
             transform: translateX(10%);
             box-shadow: 0px 0px 30px #606060;
         }
-        .sidebar li:nth-child(1) a{
+
+        .sidebar li:nth-child(1) a {
             background-color: #06A77D;
         }
-        .sidebar li:nth-child(2) a{
+
+        .sidebar li:nth-child(2) a {
             background-color: #0267C1;
         }
-        .sidebar li:nth-child(3) a{
+
+        .sidebar li:nth-child(3) a {
             background-color: #F1A208;
         }
-        .sidebar li:nth-child(4) a{
+
+        .sidebar li:nth-child(4) a {
             background-color: #F26419;
         }
     </style>
 </head>
+
 <body>
+    <div class="title">
+        <h2>Move To The Littie Button</h2>
+    </div>
     <div class="sidebar">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Works</a></li>
-        </ul>  
+        </ul>
     </div>
 </body>
+
 </html>
